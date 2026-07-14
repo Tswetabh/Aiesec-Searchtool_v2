@@ -97,37 +97,20 @@ export function WhyIndore() {
         </p>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {SELLING_POINTS.map(({ icon: Icon, title, body, image, video }) => (
+          {SELLING_POINTS.map(({ icon: Icon, title, body, video }) => (
             <div
               key={title}
               className="rounded-2xl overflow-hidden border border-white/10 bg-white/10 backdrop-blur-md transition-all duration-300 group hover:bg-white/20"
-              onMouseEnter={(e) => {
-                const vid = e.currentTarget.querySelector("video");
-                if (vid) vid.play();
-              }}
-              onMouseLeave={(e) => {
-                const vid = e.currentTarget.querySelector("video");
-                if (vid) vid.pause();
-              }}
             >
               <div className="h-64 sm:h-72 relative bg-zinc-900">
-                {video ? (
-                  <video
-                    src={video}
-                    loop
-                    muted
-                    playsInline
-                    className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500"
-                  />
-                ) : (
-                  <Image
-                    src={image!}
-                    alt={title}
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                    className="object-cover"
-                  />
-                )}
+                <video
+                  src={video}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500"
+                />
               </div>
               <div className="p-5">
                 <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/15 text-amber-300 mb-3">
