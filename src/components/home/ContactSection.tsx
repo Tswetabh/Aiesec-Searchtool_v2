@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Phone, Linkedin, MessageCircle, Mail, Instagram } from "lucide-react";
+import { Phone, MessageCircle, Mail } from "lucide-react";
 
 const TEAM = [
   {
@@ -23,8 +23,6 @@ const TEAM = [
 ];
 
 const SOCIALS = [
-  { href: "https://instagram.com/aiesecinindore", label: "Instagram", icon: Instagram },
-  { href: "https://linkedin.com/company/aiesec-in-indore", label: "LinkedIn", icon: Linkedin },
   { href: "https://wa.me/916262922113", label: "WhatsApp", icon: MessageCircle },
   { href: "mailto:igtae.indore@aiesec.net", label: "Email", icon: Mail },
 ];
@@ -63,14 +61,14 @@ export function ContactSection() {
           {TEAM.map((person) => (
             <div
               key={person.name}
-              className="rounded-2xl border border-white/10 bg-white/10 backdrop-blur-md p-7 text-center"
+              className="rounded-2xl border border-white/10 bg-white/10 backdrop-blur-md p-5 sm:p-7 text-center"
             >
-              <div className="mx-auto w-20 h-20 rounded-full overflow-hidden border-2 border-white/30 mb-4">
+              <div className="mx-auto w-32 h-32 rounded-full overflow-hidden border-4 border-white/20 mb-5 shadow-xl">
                 <Image
                   src={person.photo}
                   alt={person.name}
-                  width={80}
-                  height={80}
+                  width={128}
+                  height={128}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -94,16 +92,6 @@ export function ContactSection() {
                   >
                     <Phone size={14} />
                     {person.phone}
-                  </a>
-                  <span className="text-white/30">·</span>
-                  <a
-                    href={person.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-sm font-medium text-white/80 hover:text-white"
-                  >
-                    <Linkedin size={14} />
-                    LinkedIn
                   </a>
                 </div>
               </div>

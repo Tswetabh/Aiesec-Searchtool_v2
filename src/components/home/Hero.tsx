@@ -29,7 +29,7 @@ export function Hero() {
   return (
     <section
       id="welcome"
-      className="relative overflow-hidden min-h-[110vh] lg:min-h-screen flex items-center justify-center bg-[#f4f3f0] text-stone-900"
+      className="relative overflow-hidden w-full min-h-[110vh] lg:min-h-screen flex items-center justify-center bg-[#f4f3f0] text-stone-900"
     >
       {/* 1. Cinematic Background Elements */}
       {/* SVG Grain/Noise filter */}
