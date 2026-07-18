@@ -32,7 +32,7 @@ export function Header() {
             className="flex items-center gap-2.5 group"
           >
             <Image
-              src="/images/aiesec in indore.jpg"
+              src="/images/aiesec in indore.png"
               alt="AIESEC"
               width={160}
               height={55}
