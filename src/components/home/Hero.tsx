@@ -78,7 +78,7 @@ export function Hero() {
               height={16}
               className="rounded-full"
             />
-            AIESEC in Indore · IGTaE Search Tool
+            AIESEC in Indore · IGTae Search Tool
           </motion.div>
 
           <motion.h1
@@ -160,8 +160,8 @@ export function Hero() {
                 <h4 className="text-stone-900 font-sans font-black text-[13px] tracking-tight uppercase leading-none">
                   DIGANT PATHAK
                 </h4>
-                <p className="text-stone-500 text-[9px] font-bold mt-1 tracking-wider uppercase leading-none">
-                  LCVP IGTAE
+                <p className="text-stone-500 text-[9px] font-bold mt-1 tracking-wider leading-none">
+                  LCVP IGTae
                 </p>
                 <p className="text-stone-400 text-[8px] font-semibold mt-1 tracking-wider uppercase leading-none">
                   AIESEC IN INDORE

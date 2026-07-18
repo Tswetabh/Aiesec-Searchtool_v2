@@ -251,7 +251,6 @@ body {
   letter-spacing: 0.5px;
   margin: 0;
   color: var(--bw-paper);
-  text-transform: uppercase;
 }
 
 .board-wrapper .masthead h2 span {
@@ -534,4 +533,14 @@ body {
     /* Left edge */
     2% 96%, 0% 92%, 3% 88%, 1% 83%, 3% 79%, 0% 74%, 2% 70%, 1% 65%, 3% 60%, 0% 55%, 2% 50%, 1% 45%, 3% 40%, 0% 36%, 2% 31%, 1% 27%, 3% 22%, 0% 18%, 2% 13%, 1% 9%, 3% 5%
   );
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-link:hover {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: underline;
 }

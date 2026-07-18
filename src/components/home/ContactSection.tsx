@@ -13,7 +13,7 @@ const TEAM = [
   },
   {
     name: "Digant Pathak",
-    role: "LCVP IGTaE — AIESEC in Indore",
+    role: "LCVP IGTae — AIESEC in Indore",
     phone: "+91 88271 03938",
     phoneHref: "tel:+918827103938",
     whatsapp: "https://wa.me/918827103938",
@@ -51,7 +51,7 @@ export function ContactSection() {
             Want to bring an EP to Indore?
           </h2>
           <p className="text-white/70 mt-3 text-[15px] max-w-md mx-auto leading-relaxed">
-            Reach out to our IGTaE team directly. We&apos;re here to help
+            Reach out to our IGTae team directly. We&apos;re here to help
             match your EPs with the perfect opportunity.
           </p>
         </div>

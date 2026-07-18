@@ -85,6 +85,8 @@ export function OpportunitiesBoard() {
 
   const filtered = useMemo(() => {
     return opportunities.filter((o) => {
+      // Volunteer opportunities are closed — only show them in the dedicated Volunteer tab
+      if (o.programType === "Volunteer" && activeTrack !== "Volunteer") return false;
       const trackMatch = activeTrack === "all" || o.programType === activeTrack;
       const q = query.trim().toLowerCase();
       const textMatch =
@@ -122,7 +124,7 @@ export function OpportunitiesBoard() {
       <div className="wrap">
         <div className="masthead glass">
           <div>
-            <h2>IG<span>Tae</span> board</h2>
+            <h2>IG<span>Tae</span> BOARD</h2>
             <div className="sub">AIESEC · Indore · Rajwada Heritage Chapter</div>
           </div>
           <div className="clock">
@@ -156,8 +158,10 @@ export function OpportunitiesBoard() {
             <button
               onClick={() => setActiveTrack("Volunteer")}
               className={`chip ${activeTrack === "Volunteer" ? "active" : ""}`}
+              title="Volunteering is currently closed in Indore"
             >
               Volunteer
+              <span style={{ marginLeft: "5px", fontSize: "9px", fontWeight: 700, letterSpacing: "0.04em", color: "#ef4444", verticalAlign: "middle", background: "rgba(239,68,68,0.12)", borderRadius: "4px", padding: "1px 4px" }}>CLOSED</span>
             </button>
             <button
               onClick={() => setActiveTrack("Talent")}
@@ -180,26 +184,52 @@ export function OpportunitiesBoard() {
           <div className="empty">No opportunities match that search — try another term.</div>
         ) : (
           <div className="rows">
-            {filtered.map((o, i) => (
-              <a
-                key={o.id}
-                className="row"
-                href={o.expaLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ animationDelay: `${i * 0.02}s` }}
-              >
-                <div className="id">#{o.id}</div>
-                <div className="title">{o.title}</div>
-                <div className="org">{o.organization}</div>
-                <div className={`track ${trackClass[o.programType]}`}>
-                  {trackLabel[o.programType]}
+            {filtered.map((o, i) => {
+              const isVolunteer = o.programType === "Volunteer";
+              return isVolunteer ? (
+                <div
+                  key={o.id}
+                  className="row"
+                  title="Volunteering opportunities are currently closed in Indore."
+                  style={{
+                    animationDelay: `${i * 0.02}s`,
+                    opacity: 0.45,
+                    cursor: "not-allowed",
+                    filter: "grayscale(0.4)",
+                    pointerEvents: "none",
+                  }}
+                >
+                  <div className="id">#{o.id}</div>
+                  <div className="title">{o.title}</div>
+                  <div className="org">{o.organization}</div>
+                  <div className={`track ${trackClass[o.programType]}`}>
+                    {trackLabel[o.programType]}
+                  </div>
+                  <div className="status" style={{ color: "#ef4444" }}>
+                    <span className="d" style={{ background: "#ef4444" }}></span>Not Live
+                  </div>
                 </div>
-                <div className="status">
-                  <span className="d"></span>Live
-                </div>
-              </a>
-            ))}
+              ) : (
+                <a
+                  key={o.id}
+                  className="row"
+                  href={o.expaLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ animationDelay: `${i * 0.02}s` }}
+                >
+                  <div className="id">#{o.id}</div>
+                  <div className="title">{o.title}</div>
+                  <div className="org">{o.organization}</div>
+                  <div className={`track ${trackClass[o.programType]}`}>
+                    {trackLabel[o.programType]}
+                  </div>
+                  <div className="status">
+                    <span className="d"></span>Live
+                  </div>
+                </a>
+              );
+            })}
           </div>
         )}
 

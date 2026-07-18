@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { X, Menu } from "lucide-react";
+import { X, Menu, Linkedin } from "lucide-react";
 
 const NAV_LINKS = [
   { href: "#welcome", label: "Welcome" },
@@ -60,6 +60,15 @@ export function Header() {
           </nav>
 
           <div className="flex items-center gap-2">
+            <a
+              href="https://www.linkedin.com/in/swetabhtripathy/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Swetabh Tripathy on LinkedIn"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white/70 hover:text-white hover:bg-white/10 hover:border-white/40 transition-all"
+            >
+              <Linkedin size={15} />
+            </a>
             <button
               onClick={() => setOpen((o) => !o)}
               aria-label="Toggle menu"
