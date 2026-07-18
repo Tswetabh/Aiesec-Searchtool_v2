@@ -138,7 +138,7 @@ export function ContactSection() {
               rel="noopener noreferrer"
               className="footer-link"
             >
-              Swetabh Tripathy
+              Swetabh
             </a>
           </div>
         </div>
