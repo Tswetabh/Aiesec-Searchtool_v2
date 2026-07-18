@@ -32,11 +32,12 @@ export function Header() {
             className="flex items-center gap-2.5 group"
           >
             <Image
-              src="/images/aiesec logo.png"
+              src="/images/aiesec in indore.jpg"
               alt="AIESEC"
-              width={36}
-              height={20}
-              className="transition-transform group-hover:scale-105"
+              width={120}
+              height={40}
+              style={{ width: "auto", height: "28px" }}
+              className="transition-transform group-hover:scale-105 rounded-sm"
             />
             <span className="flex flex-col leading-none">
               <span className="font-display font-semibold text-[15px] tracking-tight">

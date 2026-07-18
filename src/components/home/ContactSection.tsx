@@ -116,17 +116,31 @@ export function ContactSection() {
         </div>
 
         {/* Footer (only here) */}
-        <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between text-xs text-white/40">
-          <p>
-            &copy; {new Date().getFullYear()} AIESEC in Indore. All rights reserved.
-          </p>
-          <p>
-            Data sourced from{" "}
-            <a href="https://aiesec.org" className="underline hover:text-white/60" target="_blank">
-              EXPA
+        <div className="border-t border-white/10 pt-8 pb-4 flex flex-col gap-6 text-xs text-white/40">
+          <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
+            <p>
+              &copy; {new Date().getFullYear()} AIESEC in Indore. All rights reserved.
+            </p>
+            <p>
+              Data sourced from{" "}
+              <a href="https://aiesec.org" className="underline hover:text-white/60" target="_blank">
+                EXPA
+              </a>
+              . Not an official AIESEC International product.
+            </p>
+          </div>
+          
+          <div className="text-center text-[13px] tracking-wide text-white/35">
+            made with <span className="text-[#e25555]">♥</span> by{" "}
+            <a
+              href="https://www.linkedin.com/in/swetabhtripathy/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-link"
+            >
+              Swetabh Tripathy
             </a>
-            . Not an official AIESEC International product.
-          </p>
+          </div>
         </div>
       </div>
     </section>
