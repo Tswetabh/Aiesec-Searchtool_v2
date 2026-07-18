@@ -34,10 +34,10 @@ export function Header() {
             <Image
               src="/images/aiesec in indore.jpg"
               alt="AIESEC"
-              width={120}
-              height={40}
-              style={{ width: "auto", height: "28px" }}
-              className="transition-transform group-hover:scale-105 rounded-sm"
+              width={160}
+              height={55}
+              style={{ width: "auto", height: "40px" }}
+              className="transition-transform group-hover:scale-105 rounded-sm shadow-sm"
             />
             <span className="flex flex-col leading-none">
               <span className="font-display font-semibold text-[15px] tracking-tight">
