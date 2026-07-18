@@ -102,14 +102,14 @@ export function WhyIndore() {
               key={title}
               className="rounded-2xl overflow-hidden border border-white/10 bg-white/10 backdrop-blur-md transition-all duration-300 group hover:bg-white/20"
             >
-              <div className="h-64 sm:h-72 relative bg-zinc-900">
+              <div className="h-48 sm:h-52 relative bg-zinc-900">
                 <video
                   src={video}
                   autoPlay
                   loop
                   muted
                   playsInline
-                  className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500"
+                  className="w-full h-full object-cover scale-[1.15] opacity-80 group-hover:opacity-100 transition-opacity duration-500"
                 />
               </div>
               <div className="p-5">

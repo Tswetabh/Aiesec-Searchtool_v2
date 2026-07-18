@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import Image from "next/image";
+import { useState } from "react";
 
 const HERO_IMAGES = [
   "/images/rajwada.jpg",
@@ -16,6 +17,8 @@ const HERO_IMAGES = [
 ];
 
 export function Hero() {
+  const [activeMobileCard, setActiveMobileCard] = useState<number>(1);
+
   const scrollToBoard = (e: React.MouseEvent) => {
     e.preventDefault();
     document.querySelector("#opportunities")?.scrollIntoView({ behavior: "smooth" });
@@ -102,8 +105,80 @@ export function Hero() {
           </motion.p>
         </div>
 
-        {/* Center Scrapbook Collage Container */}
-        <div className="relative w-full overflow-visible flex items-center justify-center py-6 my-2 z-10 scale-[0.6] xxs:scale-[0.7] sm:scale-[0.85] md:scale-100 transition-transform origin-center">
+        {/* ── Mobile Scrapbook: Fused collage ── */}
+        <div className="sm:hidden flex items-center justify-center py-10 px-2 w-full overflow-hidden">
+          {/* Left: Digant Pathak */}
+          <div 
+            onClick={() => setActiveMobileCard(0)}
+            className="w-[110px] flex-shrink-0 bg-white p-2 pb-4 shadow-xl border border-gray-100/50 select-none relative transition-all duration-300 cursor-pointer" 
+            style={{ transform: `rotate(-6deg) ${activeMobileCard === 0 ? 'scale(1.1)' : 'scale(1)'}`, zIndex: activeMobileCard === 0 ? 30 : 10, marginRight: "-30px", marginTop: "25px" }}
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" className="absolute -top-3.5 left-1/2 -translate-x-1/2 drop-shadow-md z-30 pointer-events-none">
+              <rect x="11.5" y="11" width="1" height="11" fill="#777" />
+              <polygon points="11,22 12,24 13,22" fill="#444" />
+              <ellipse cx="12" cy="10" rx="6" ry="3.5" fill="#ef4444" opacity="0.9" />
+              <rect x="8" y="4" width="8" height="6" fill="#ef4444" rx="1.5" />
+              <circle cx="12" cy="3.5" r="5" fill="#f87171" />
+              <circle cx="10" cy="2.5" r="1.5" fill="#fff" opacity="0.75" />
+            </svg>
+            <div className="relative w-full overflow-hidden bg-zinc-100 border border-gray-200" style={{ height: "125px" }}>
+              <Image src="/images/digant pathak.jpeg" alt="Digant Pathak" fill style={{ objectFit: "cover" }} sizes="110px" />
+            </div>
+            <div className="text-center mt-2">
+              <p className="text-stone-900 font-black text-[8px] tracking-tight uppercase leading-tight">DIGANT PATHAK</p>
+              <p className="text-stone-500 text-[7px] font-bold mt-0.5 leading-none">LCVP IGTae</p>
+              <p className="text-stone-400 text-[6px] font-semibold mt-0.5 uppercase leading-none">AIESEC INDORE</p>
+            </div>
+          </div>
+
+          {/* Center: Indore Poster */}
+          <div 
+            onClick={() => setActiveMobileCard(1)}
+            className="w-[160px] flex-shrink-0 bg-white px-2 pt-6 pb-2 shadow-2xl border border-stone-200/50 relative transition-all duration-300 cursor-pointer" 
+            style={{
+              clipPath:
+                "polygon(4% 0, 96% 0, 98% 5%, 96% 10%, 98% 15%, 96% 20%, 98% 25%, 96% 30%, 98% 35%, 96% 40%, 98% 45%, 96% 50%, 98% 55%, 96% 60%, 98% 65%, 96% 70%, 98% 75%, 96% 80%, 98% 85%, 96% 90%, 98% 95%, 96% 100%, 4% 100%, 2% 95%, 4% 90%, 2% 85%, 4% 80%, 2% 75%, 4% 70%, 2% 65%, 4% 60%, 2% 55%, 4% 50%, 2% 45%, 4% 40%, 2% 35%, 4% 30%, 2% 25%, 4% 20%, 2% 15%, 4% 10%, 2% 5%)",
+              transform: activeMobileCard === 1 ? 'scale(1.05)' : 'scale(1)',
+              zIndex: activeMobileCard === 1 ? 30 : 20
+            }}>
+            <div className="absolute inset-x-0 top-1.5 flex justify-center z-20">
+              <span className="text-[6px] font-extrabold tracking-widest text-stone-600 uppercase">CITY LIFE &amp; LEADERSHIP</span>
+            </div>
+            <div className="relative w-full overflow-hidden bg-zinc-800 border border-stone-200" style={{ height: "190px" }}>
+              <Image src="/images/INDORE.jpg" alt="Indore" fill style={{ objectFit: "cover" }} className="brightness-[0.9]" sizes="160px" />
+              <div className="absolute inset-x-0 bottom-2 px-1 flex justify-center z-25">
+                <p className="text-white font-black text-[9px] tracking-wide text-center uppercase leading-tight drop-shadow-sm">INDORE: WHERE LEADERSHIP FLOURISHES.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Right: Veddur Lenjhara */}
+          <div 
+            onClick={() => setActiveMobileCard(2)}
+            className="w-[110px] flex-shrink-0 bg-white p-2 pb-4 shadow-xl border border-gray-100/50 select-none relative transition-all duration-300 cursor-pointer" 
+            style={{ transform: `rotate(6deg) ${activeMobileCard === 2 ? 'scale(1.1)' : 'scale(1)'}`, zIndex: activeMobileCard === 2 ? 30 : 10, marginLeft: "-30px", marginTop: "25px" }}
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" className="absolute -top-3.5 left-1/2 -translate-x-1/2 drop-shadow-md z-30 pointer-events-none">
+              <rect x="11.5" y="11" width="1" height="11" fill="#777" />
+              <polygon points="11,22 12,24 13,22" fill="#444" />
+              <ellipse cx="12" cy="10" rx="6" ry="3.5" fill="#ef4444" opacity="0.9" />
+              <rect x="8" y="4" width="8" height="6" fill="#ef4444" rx="1.5" />
+              <circle cx="12" cy="3.5" r="5" fill="#f87171" />
+              <circle cx="10" cy="2.5" r="1.5" fill="#fff" opacity="0.75" />
+            </svg>
+            <div className="relative w-full overflow-hidden bg-zinc-100 border border-gray-200" style={{ height: "125px" }}>
+              <Image src="/images/veddur.png" alt="Veddur Lenjhara" fill style={{ objectFit: "cover" }} sizes="110px" />
+            </div>
+            <div className="text-center mt-2">
+              <p className="text-stone-900 font-black text-[8px] tracking-tight uppercase leading-tight">VEDDUR LENJHARA</p>
+              <p className="text-stone-500 text-[7px] font-bold mt-0.5 uppercase leading-none">LCP AIESEC</p>
+              <p className="text-stone-400 text-[6px] font-semibold mt-0.5 uppercase leading-none">AIESEC INDORE</p>
+            </div>
+          </div>
+        </div>
+
+        {/* ── Desktop Scrapbook: absolute-positioned collage (sm+) ── */}
+        <div className="hidden sm:flex relative w-full items-center justify-center z-10 sm:scale-[0.85] md:scale-100 transition-transform origin-top sm:h-[490px] md:h-[590px] overflow-hidden">
           <motion.div
             animate={{ y: [0, -6, 0] }}
             transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
@@ -120,7 +195,7 @@ export function Hero() {
               />
             </div>
 
-            {/* A. Left Image: Veddur (labeled as Digant Pathak) */}
+            {/* A. Left polaroid: Digant Pathak */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8, rotate: -8, x: -35 }}
               animate={{ opacity: 1, scale: 1, rotate: -4, x: 0 }}
@@ -129,13 +204,7 @@ export function Hero() {
               className="absolute left-0 top-[60px] w-[240px] bg-white p-3 pb-5 shadow-2xl z-20 select-none border border-gray-100/50"
               style={{ originX: 0.5, originY: 0.1 }}
             >
-              {/* 3D Red Pushpin */}
-              <svg
-                width="30"
-                height="30"
-                viewBox="0 0 24 24"
-                className="absolute -top-4.5 left-1/2 -translate-x-1/2 drop-shadow-md z-30 pointer-events-none"
-              >
+              <svg width="30" height="30" viewBox="0 0 24 24" className="absolute -top-4.5 left-1/2 -translate-x-1/2 drop-shadow-md z-30 pointer-events-none">
                 <rect x="11.5" y="11" width="1" height="11" fill="#777" />
                 <polygon points="11,22 12,24 13,22" fill="#444" />
                 <ellipse cx="12" cy="10" rx="6" ry="3.5" fill="#ef4444" opacity="0.9" />
@@ -143,71 +212,36 @@ export function Hero() {
                 <circle cx="12" cy="3.5" r="5" fill="#f87171" />
                 <circle cx="10" cy="2.5" r="1.5" fill="#fff" opacity="0.75" />
               </svg>
-
-              {/* Photo Container */}
-              <div className="relative overflow-hidden bg-zinc-100 border border-gray-200" style={{ position: "relative", width: "100%", height: "200px" }}>
-                <Image
-                  src="/images/digant pathak.jpeg"
-                  alt="Digant Pathak Photo"
-                  fill
-                  style={{ objectFit: "cover" }}
-                  sizes="230px"
-                />
+              <div className="relative overflow-hidden bg-zinc-100 border border-gray-200" style={{ width: "100%", height: "200px" }}>
+                <Image src="/images/digant pathak.jpeg" alt="Digant Pathak Photo" fill style={{ objectFit: "cover" }} sizes="230px" />
               </div>
-
-              {/* Polaroid bottom label */}
               <div className="text-center mt-3">
-                <h4 className="text-stone-900 font-sans font-black text-[13px] tracking-tight uppercase leading-none">
-                  DIGANT PATHAK
-                </h4>
-                <p className="text-stone-500 text-[9px] font-bold mt-1 tracking-wider leading-none">
-                  LCVP IGTae
-                </p>
-                <p className="text-stone-400 text-[8px] font-semibold mt-1 tracking-wider uppercase leading-none">
-                  AIESEC IN INDORE
-                </p>
+                <h4 className="text-stone-900 font-sans font-black text-[13px] tracking-tight uppercase leading-none">DIGANT PATHAK</h4>
+                <p className="text-stone-500 text-[9px] font-bold mt-1 tracking-wider leading-none">LCVP IGTae</p>
+                <p className="text-stone-400 text-[8px] font-semibold mt-1 tracking-wider uppercase leading-none">AIESEC IN INDORE</p>
               </div>
             </motion.div>
 
-            {/* B. Center Poster: Indore Poster (Torn left/right edges with white sheet backing) */}
+            {/* B. Center Poster */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
               className="absolute left-1/2 -translate-x-1/2 -top-12 w-[400px] h-fit drop-shadow-2xl z-15 bg-white px-3 pt-10 pb-3 flex flex-col border border-stone-200/50"
-              style={{
-                clipPath:
-                  "polygon(4% 0, 96% 0, 98% 5%, 96% 10%, 98% 15%, 96% 20%, 98% 25%, 96% 30%, 98% 35%, 96% 40%, 98% 45%, 96% 50%, 98% 55%, 96% 60%, 98% 65%, 96% 70%, 98% 75%, 96% 80%, 98% 85%, 96% 90%, 98% 95%, 96% 100%, 4% 100%, 2% 95%, 4% 90%, 2% 85%, 4% 80%, 2% 75%, 4% 70%, 2% 65%, 4% 60%, 2% 55%, 4% 50%, 2% 45%, 4% 40%, 2% 35%, 4% 30%, 2% 25%, 4% 20%, 2% 15%, 4% 10%, 2% 5%)",
-              }}
+              style={{ clipPath: "polygon(4% 0, 96% 0, 98% 5%, 96% 10%, 98% 15%, 96% 20%, 98% 25%, 96% 30%, 98% 35%, 96% 40%, 98% 45%, 96% 50%, 98% 55%, 96% 60%, 98% 65%, 96% 70%, 98% 75%, 96% 80%, 98% 85%, 96% 90%, 98% 95%, 96% 100%, 4% 100%, 2% 95%, 4% 90%, 2% 85%, 4% 80%, 2% 75%, 4% 70%, 2% 65%, 4% 60%, 2% 55%, 4% 50%, 2% 45%, 4% 40%, 2% 35%, 4% 30%, 2% 25%, 4% 20%, 2% 15%, 4% 10%, 2% 5%)" }}
             >
-              {/* Subtitle printed directly on the top white margin */}
               <div className="absolute inset-x-0 top-3 flex justify-center z-20">
-                <span className="text-[10px] font-extrabold tracking-widest text-stone-700 uppercase font-sans">
-                  INDORE: CITY LIFE & LEADERSHIP
-                </span>
+                <span className="text-[10px] font-extrabold tracking-widest text-stone-700 uppercase font-sans">INDORE: CITY LIFE &amp; LEADERSHIP</span>
               </div>
-
-              {/* The main Indore Photo */}
               <div className="relative w-full overflow-hidden bg-zinc-800 border border-stone-200" style={{ height: "450px" }}>
-                <Image
-                  src="/images/INDORE.jpg"
-                  alt="AIESEC Indore Poster"
-                  fill
-                  style={{ objectFit: "cover" }}
-                  className="brightness-[0.9] contrast-[1.02]"
-                  sizes="380px"
-                />
-
-                {/* Main tagline text overlay */}
+                <Image src="/images/INDORE.jpg" alt="AIESEC Indore Poster" fill style={{ objectFit: "cover" }} className="brightness-[0.9] contrast-[1.02]" sizes="380px" />
                 <div className="absolute inset-x-0 bottom-5 px-3 flex justify-center z-25">
-                  <h3 className="text-white font-display font-black text-[20px] tracking-wide text-center leading-tight uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.85)]">
-                    INDORE: WHERE LEADERSHIP FLOURISHES.
-                  </h3>
+                  <h3 className="text-white font-display font-black text-[20px] tracking-wide text-center leading-tight uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.85)]">INDORE: WHERE LEADERSHIP FLOURISHES.</h3>
                 </div>
               </div>
             </motion.div>
 
-            {/* C. Right Image: Digant (labeled as Veddur Lenjhara) */}
+            {/* C. Right polaroid: Veddur Lenjhara */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8, rotate: 8, x: 35 }}
               animate={{ opacity: 1, scale: 1, rotate: 4, x: 0 }}
@@ -216,13 +250,7 @@ export function Hero() {
               className="absolute right-0 top-[60px] w-[240px] bg-white p-3 pb-5 shadow-2xl z-20 select-none border border-gray-100/50"
               style={{ originX: 0.5, originY: 0.1 }}
             >
-              {/* 3D Red Pushpin */}
-              <svg
-                width="30"
-                height="30"
-                viewBox="0 0 24 24"
-                className="absolute -top-4.5 left-1/2 -translate-x-1/2 drop-shadow-md z-30 pointer-events-none"
-              >
+              <svg width="30" height="30" viewBox="0 0 24 24" className="absolute -top-4.5 left-1/2 -translate-x-1/2 drop-shadow-md z-30 pointer-events-none">
                 <rect x="11.5" y="11" width="1" height="11" fill="#777" />
                 <polygon points="11,22 12,24 13,22" fill="#444" />
                 <ellipse cx="12" cy="10" rx="6" ry="3.5" fill="#ef4444" opacity="0.9" />
@@ -230,29 +258,13 @@ export function Hero() {
                 <circle cx="12" cy="3.5" r="5" fill="#f87171" />
                 <circle cx="10" cy="2.5" r="1.5" fill="#fff" opacity="0.75" />
               </svg>
-
-              {/* Photo Container */}
-              <div className="relative overflow-hidden bg-zinc-100 border border-gray-200" style={{ position: "relative", width: "100%", height: "200px" }}>
-                <Image
-                  src="/images/veddur.png"
-                  alt="Veddur Lenjhara Photo"
-                  fill
-                  style={{ objectFit: "cover" }}
-                  sizes="230px"
-                />
+              <div className="relative overflow-hidden bg-zinc-100 border border-gray-200" style={{ width: "100%", height: "200px" }}>
+                <Image src="/images/veddur.png" alt="Veddur Lenjhara Photo" fill style={{ objectFit: "cover" }} sizes="230px" />
               </div>
-
-              {/* Polaroid bottom label */}
               <div className="text-center mt-3">
-                <h4 className="text-stone-900 font-sans font-black text-[13px] tracking-tight uppercase leading-none">
-                  VEDDUR LENJHARA
-                </h4>
-                <p className="text-stone-500 text-[9px] font-bold mt-1.5 tracking-wider uppercase leading-none">
-                  LCP AIESEC IN INDORE
-                </p>
-                <p className="text-stone-400 text-[8px] font-semibold mt-1 tracking-wider uppercase leading-none">
-                  AIESEC IN INDORE
-                </p>
+                <h4 className="text-stone-900 font-sans font-black text-[13px] tracking-tight uppercase leading-none">VEDDUR LENJHARA</h4>
+                <p className="text-stone-500 text-[9px] font-bold mt-1.5 tracking-wider uppercase leading-none">LCP AIESEC IN INDORE</p>
+                <p className="text-stone-400 text-[8px] font-semibold mt-1 tracking-wider uppercase leading-none">AIESEC IN INDORE</p>
               </div>
             </motion.div>
           </motion.div>
