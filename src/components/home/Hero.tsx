@@ -294,6 +294,24 @@ export function Hero() {
           </a>
         </motion.div>
 
+        {/* Made with love */}
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.25 }}
+          className="text-center text-[13px] tracking-wide text-stone-500 mt-6"
+        >
+          made with <span className="text-[#e25555]">♥</span> by{" "}
+          <a
+            href="https://www.linkedin.com/in/swetabhtripathy/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-stone-800 underline transition-colors"
+          >
+            Swetabh
+          </a>
+        </motion.div>
+
       </div>
     </section>
   );

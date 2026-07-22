@@ -129,18 +129,6 @@ export function ContactSection() {
               . Not an official AIESEC International product.
             </p>
           </div>
-          
-          <div className="text-center text-[13px] tracking-wide text-white/35">
-            made with <span className="text-[#e25555]">♥</span> by{" "}
-            <a
-              href="https://www.linkedin.com/in/swetabhtripathy/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="footer-link"
-            >
-              Swetabh
-            </a>
-          </div>
         </div>
       </div>
     </section>
