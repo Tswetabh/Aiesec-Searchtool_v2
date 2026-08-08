@@ -33,7 +33,7 @@ export function ContactSection() {
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/Copy of Indore.png"
+          src="/images/Copy_of_Indore.png"
           alt="AIESEC in Indore Team"
           fill
           className="object-cover opacity-20"

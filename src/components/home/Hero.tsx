@@ -9,10 +9,10 @@ const HERO_IMAGES = [
   "/images/rajwada.jpg",
   "/images/palace.avif",
   "/images/temple.jpg",
-  "/images/poha jalebi.jpg",
+  "/images/poha_jalebi.jpg",
   "/images/lake.jpg",
   "/images/heritage.jpg",
-  "/images/inside lal bagh temple.jpg",
+  "/images/inside_lal_bagh_temple.jpg",
   "/images/trees.jpg",
 ];
 
@@ -75,7 +75,7 @@ export function Hero() {
             className="inline-flex items-center gap-2 rounded-full border border-stone-200 bg-white/70 backdrop-blur-sm px-4 py-1.5 text-xs font-semibold text-stone-700 mb-5 shadow-sm"
           >
             <Image
-              src="/images/aiesec in indore.jpg"
+              src="/images/aiesec_in_indore.jpg"
               alt="AIESEC in Indore"
               width={16}
               height={16}
@@ -122,7 +122,7 @@ export function Hero() {
               <circle cx="10" cy="2.5" r="1.5" fill="#fff" opacity="0.75" />
             </svg>
             <div className="relative w-full overflow-hidden bg-zinc-100 border border-gray-200" style={{ height: "125px" }}>
-              <Image src="/images/digant pathak.jpeg" alt="Digant Pathak" fill style={{ objectFit: "cover" }} sizes="110px" />
+              <Image src="/images/digant_pathak.jpeg" alt="Digant Pathak" fill style={{ objectFit: "cover" }} sizes="110px" />
             </div>
             <div className="text-center mt-2">
               <p className="text-stone-900 font-black text-[8px] tracking-tight uppercase leading-tight">DIGANT PATHAK</p>
@@ -187,7 +187,7 @@ export function Hero() {
             {/* AIESEC logo watermark on the board */}
             <div className="absolute top-2 right-4 opacity-25 select-none pointer-events-none z-20">
               <Image
-                src="/images/aiesec logo.png"
+                src="/images/aiesec_logo.png"
                 alt="AIESEC"
                 width={85}
                 height={50}

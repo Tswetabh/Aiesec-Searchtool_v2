@@ -31,10 +31,10 @@ const SELLING_POINTS = [
 ];
 
 const BACKGROUND_IMAGES = [
-  { src: "/images/lotus vally.jpg", top: "-5%", left: "-5%", rotate: "-8deg", width: "450px", height: "350px" },
-  { src: "/images/pitra parvat.jpg", top: "15%", right: "-5%", rotate: "6deg", width: "380px", height: "480px" },
-  { src: "/images/old palace.jpg", bottom: "-10%", left: "10%", rotate: "12deg", width: "500px", height: "350px" },
-  { src: "/images/inside lal bagh temple.jpg", top: "45%", left: "35%", rotate: "-4deg", width: "300px", height: "400px" },
+  { src: "/images/lotus_vally.jpg", top: "-5%", left: "-5%", rotate: "-8deg", width: "450px", height: "350px" },
+  { src: "/images/pitra_parvat.jpg", top: "15%", right: "-5%", rotate: "6deg", width: "380px", height: "480px" },
+  { src: "/images/old_palace.jpg", bottom: "-10%", left: "10%", rotate: "12deg", width: "500px", height: "350px" },
+  { src: "/images/inside_lal_bagh_temple.jpg", top: "45%", left: "35%", rotate: "-4deg", width: "300px", height: "400px" },
   { src: "/images/trees.jpg", bottom: "15%", right: "20%", rotate: "-15deg", width: "320px", height: "280px" },
   { src: "/images/heritage.jpg", top: "-10%", left: "45%", rotate: "5deg", width: "350px", height: "300px" },
   // Newly added images for a denser collage:
@@ -51,9 +51,9 @@ const BACKGROUND_IMAGES = [
   { src: "/images/lotus_lake.jpg", bottom: "-15%", right: "35%", rotate: "7deg", width: "420px", height: "280px" },
   { src: "/images/palace.avif", top: "10%", left: "55%", rotate: "16deg", width: "320px", height: "250px" },
   { src: "/images/rushikesh_sonkusale_TRd9IvUyS38_unsplash.jpg", top: "75%", left: "50%", rotate: "-18deg", width: "380px", height: "450px" },
-  { src: "/images/aiesec in indore.jpg", bottom: "45%", right: "-15%", rotate: "-5deg", width: "300px", height: "400px" },
+  { src: "/images/aiesec_in_indore.jpg", bottom: "45%", right: "-15%", rotate: "-5deg", width: "300px", height: "400px" },
   { src: "/images/INDORE.jpg", top: "35%", left: "-15%", rotate: "9deg", width: "250px", height: "350px" },
-  { src: "/images/i love idnore logo .jpg", bottom: "25%", left: "60%", rotate: "3deg", width: "280px", height: "280px" },
+  { src: "/images/i_love_idnore_logo_.jpg", bottom: "25%", left: "60%", rotate: "3deg", width: "280px", height: "280px" },
 ];
 
 export function WhyIndore() {
