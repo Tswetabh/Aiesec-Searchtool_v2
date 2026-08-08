@@ -213,7 +213,7 @@ export function Hero() {
                 <circle cx="10" cy="2.5" r="1.5" fill="#fff" opacity="0.75" />
               </svg>
               <div className="relative overflow-hidden bg-zinc-100 border border-gray-200" style={{ width: "100%", height: "200px" }}>
-                <Image src="/images/digant pathak.jpeg" alt="Digant Pathak Photo" fill style={{ objectFit: "cover" }} sizes="230px" />
+                <Image src="/images/digantpathak.jpeg" alt="Digant Pathak Photo" fill style={{ objectFit: "cover" }} sizes="230px" />
               </div>
               <div className="text-center mt-3">
                 <h4 className="text-stone-900 font-sans font-black text-[13px] tracking-tight uppercase leading-none">DIGANT PATHAK</h4>
