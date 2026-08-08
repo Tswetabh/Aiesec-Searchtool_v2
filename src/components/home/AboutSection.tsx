@@ -46,7 +46,7 @@ const BACKGROUND_IMAGES = [
   // 10 more random images:
   { src: "/images/chai_stall.jpg", top: "50%", left: "-10%", rotate: "15deg", width: "250px", height: "200px" },
   { src: "/images/chhatri_dome.jpg", top: "60%", right: "10%", rotate: "-9deg", width: "350px", height: "300px" },
-  { src: "/images/indore_poster.jpg", bottom: "35%", left: "20%", rotate: "4deg", width: "300px", height: "450px" },
+  { src: "/images/indore_rajwada_collage.jpg", bottom: "35%", left: "20%", rotate: "4deg", width: "300px", height: "450px" },
   { src: "/images/lake.jpg", top: "-15%", left: "25%", rotate: "-12deg", width: "400px", height: "300px" },
   { src: "/images/lotus_lake.jpg", bottom: "-15%", right: "35%", rotate: "7deg", width: "420px", height: "280px" },
   { src: "/images/palace.avif", top: "10%", left: "55%", rotate: "16deg", width: "320px", height: "250px" },
