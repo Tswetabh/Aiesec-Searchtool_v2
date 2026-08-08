@@ -18,7 +18,7 @@ const TEAM = [
     phoneHref: "tel:+918827103938",
     whatsapp: "https://wa.me/918827103938",
     linkedin: "https://linkedin.com",
-    photo: "/images/digant pathak.jpeg",
+    photo: "/images/digant-pathak.jpeg",
   },
 ];
 
