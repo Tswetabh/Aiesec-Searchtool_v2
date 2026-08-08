@@ -15,6 +15,7 @@ const AVAILABLE_IMAGES = [
   "/images/chai-stall.jpg",
   "/images/chai.jpg",
   "/images/chhatri-dome.jpg",
+  "/images/digant-pathak.jpeg",
   "/images/e1e6adc40d27037150609f06a3370e96.jpg",
   "/images/f4be8750c06361745ff3f480040be56f.jpg",
   "/images/harsh-vardhan-yadav-MsKGTatzcrA-unsplash.jpg",
@@ -36,6 +37,7 @@ const AVAILABLE_IMAGES = [
   "/images/temple.jpg",
   "/images/trees.jpg",
   "/images/veddur.png",
+  "/images/white-coller.jpeg",
 ];
 import type { Opportunity } from "@/lib/types";
 
